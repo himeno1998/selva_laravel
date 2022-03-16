@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//会員登録画面
+Route::get('/member', "MemberController@register")->name("member.register");
+Route::post('/member/post', "MemberController@post")->name("member.post");
+//会員確認画面
+Route::get('/member/confirm', "MemberController@confirm")->name("member.confirm");
+Route::post('/member/store', "MemberController@store")->name("member.store");
+//会員完了画面
+Route::get('/member/complete', "MemberController@complete")->name("member.complete");
+
+//Route::get('/home', "HomeController@index")->name("home");
