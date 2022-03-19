@@ -10,17 +10,21 @@ use Validator;
 class MemberController extends Controller
 {
 //会員登録画面
-    private $formItems = ["name", "title", "body"];
+    private $formItems = ["name_sei", "name_mei", "nickname","gender", "password","password_confirmed", "email",];
     private $validator = [
-		"name" => "required|string|max:100",
-		"title" => "required|string|max:100",
-		"body" => "required|string|max:100"
+		"name_sei" => "required|string|max:100",
+		"name_mei" => "required|string|max:100",
+		"nickname" => "required|string",
+		"gender" => "required|integer|max:100|in:1,2",
+		"password" => "required|string|min:8|max:16",
+		"password_confirmed" => "required|string|min:8|max:16|same:password",//passwordと同じか
+		"email" => "required|string|max:100|email"
 	];
     public function register(){
         // 登録画面表示
         return view("member.register");
     }
-    
+  
 
     public function post(Request $request){
         //セッションから値を取り出す
@@ -51,7 +55,11 @@ class MemberController extends Controller
 			return redirect()->action("MemberController@register");
 		}
         
-        return view("member.confirm",["input" => $input]);
+        // return view("member.confirm",["input" => $input]);
+		// $gender = config('master.gender');
+		// return view('master.index', compact('gender'));
+		
+
 
 
 
@@ -74,8 +82,7 @@ class MemberController extends Controller
 			return redirect()->action("MemberController@register");
 		}
         //ここでメールを送信するなどを行う
-
-
+		// DB::insert('insert into reviews (live_date, musician, venue, text, created_at) values (:live_date, :musician, :venue, :text, NOW())', $input);
 
 
 		//セッションを空にする

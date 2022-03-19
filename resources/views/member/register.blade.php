@@ -1,4 +1,6 @@
 <h3>フォーム</h3>
+
+<!--　エラーメッセージの有無を返す  -->
 @if ($errors->any())
 <div style="color:red;">
 <ul>
@@ -26,10 +28,10 @@
 	</div>
 	<label>性別</label>
 	<div>
-		男性<input type="radio" name="gender_male" value="{{ old('gender_male') }}" />
+		男性<input type="radio" name="gender" value="1" @if(old('gender')=="1")  checked @endif />
 	</div>
 	<div>
-		女性<input type="radio" name="gender_female" value="{{ old('gender_female') }}" />
+		女性<input type="radio" name="gender" value="2" @if(old('gender')=="2") checked @endif />
 	</div>
 	<label>パスワード</label>
 	<div>
@@ -37,7 +39,7 @@
 	</div>
 	<label>パスワード確認</label>
 	<div>
-		<input type="password" name="password-confirm" value="{{ old('password-confirm') }}" />
+		<input type="password" name="password_confirmed" value="{{ old('password_confirmed') }}" />
 	</div>
 	<label>メールアドレス</label>
 	<div>
