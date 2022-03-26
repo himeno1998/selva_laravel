@@ -26,3 +26,13 @@ Route::post('/member/store', "MemberController@store")->name("member.store");
 Route::get('/member/complete', "MemberController@complete")->name("member.complete");
 
 //Route::get('/home', "HomeController@index")->name("home");
+
+
+//ログイン
+
+Auth::routes(['register' => false]);
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+

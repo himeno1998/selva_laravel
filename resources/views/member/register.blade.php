@@ -1,50 +1,95 @@
-<h3>フォーム</h3>
+<link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+<h3>会員情報登録</h3>
 
 <!--　エラーメッセージの有無を返す  -->
 @if ($errors->any())
-<div style="color:red;">
+<div style="color:red; font-size: 16px">
 <ul>
-	@foreach ($errors->all() as $error)
-	<li>{{ $error }}</li>
-	@endforeach
+
 </ul>
 </div>
 @endif
 
 <form method="post" action="{{ route('member.post') }}">
 	@csrf
-	氏名
-	<label>姓</label>
-	<div>
-		<input type="text" name="name_sei" value="{{ old('name_sei') }}" />
-	</div>
-	<label>名</label>
-	<div>
-		<input type="text" name="name_mei" value="{{ old('name_mei') }}" />
-	</div>
-	<label>ニックネーム</label>
-	<div>
-		<input type="text" name="nickname" value="{{ old('nickname') }}" />
-	</div>
-	<label>性別</label>
-	<div>
-		男性<input type="radio" name="gender" value="1" @if(old('gender')=="1")  checked @endif />
-	</div>
-	<div>
-		女性<input type="radio" name="gender" value="2" @if(old('gender')=="2") checked @endif />
-	</div>
-	<label>パスワード</label>
-	<div>
-		<input type="password" name="password" value="{{ old('password') }}" />
-	</div>
-	<label>パスワード確認</label>
-	<div>
-		<input type="password" name="password_confirmed" value="{{ old('password_confirmed') }}" />
-	</div>
-	<label>メールアドレス</label>
-	<div>
+    <div class="row">
+        <div class="col-2">
+	        <label>氏名</label>
+		    姓<input type="text" name="name_sei" value="{{ old('name_sei') }}" />
+            <div style="color:red; font-size: 16px">
+            @if($errors->has('name_sei'))
+                @foreach($errors->get('name_sei') as $message)
+                    {{ $message }}<br>
+                @endforeach
+            @endif
+            </div>
+            名<input type="text" name="name_mei" value="{{ old('name_mei') }}" />
+            <div style="color:red; font-size: 16px">
+                @if($errors->has('name_mei'))
+                    @foreach($errors->get('name_mei') as $message)
+                        {{ $message }}<br>
+                    @endforeach
+                @endif
+            </div>
+	    </div>
+        <div class="col-2">
+	      <label>ニックネーム</label>
+            <input type="text" name="nickname" value="{{ old('nickname') }}" />
+        </div>
+        <div style="color:red; font-size: 16px">
+            @if($errors->has('nickname'))
+                @foreach($errors->get('nickname') as $message)
+                    {{ $message }}<br>
+                @endforeach
+            @endif
+        </div>
+        <div class="col-2">
+	    <label>性別</label>
+            <input type="radio" name="gender" value="1" @if(old('gender')=="1")  checked @endif />男性
+            <input type="radio" name="gender" value="2" @if(old('gender')=="2") checked @endif />女性
+        </div>
+        <div style="color:red; font-size: 16px">
+            @if($errors->has('gender'))
+                @foreach($errors->get('gender') as $message)
+                    {{ $message }}<br>
+                @endforeach
+            @endif
+        </div>
+        <div class="col-2">
+            <label>パスワード</label>
+                <input type="password" name="password" value="{{ old('password') }}" />
+        </div>
+        <div style="color:red; font-size: 16px">
+            @if($errors->has('password'))
+                @foreach($errors->get('password') as $message)
+                    {{ $message }}<br>
+                @endforeach
+            @endif
+        </div>
+        <div class="col-2">
+            <label>パスワード確認</label>
+                <input type="password" name="password_confirmed" value="{{ old('password_confirmed') }}" />
+         </div>
+        <div style="color:red; font-size: 16px">
+            @if($errors->has('password'))
+                @foreach($errors->get('password') as $message)
+                    {{ $message }}<br>
+                @endforeach
+            @endif
+        </div>
+        <div class="col-2">
+        <label>メールアドレス </label>
 		<input type="text" name="email" value="{{ old('email') }}" />
-	</div>
+        </div>
+        <div style="color:red; font-size: 16px">
+            @if($errors->has('email'))
+                @foreach($errors->get('email') as $message)
+                    {{ $message }}<br>
+                @endforeach
+            @endif
+        </div>
+    </div>
+
 
 
 
@@ -53,5 +98,5 @@
 		<textarea name="body">{{ old('body') }}</textarea>
 	</div> -->
 
-	<input class="btn btn-primary" type="submit" value="送信" />
+	<input class="btn btn-primary" type="submit" value="確認画面へ" />
 </form>
