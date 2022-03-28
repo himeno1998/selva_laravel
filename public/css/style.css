@@ -10,7 +10,13 @@ body{
 h3{
     font-size: 30px;
 }
-
+.row{
+    text-align: left;
+    margin-left: 41%;
+}
+label{
+    margin-right: 50px;
+}
 .btn-primary{
     padding: 10px 40px;
     background:coral;
@@ -33,7 +39,6 @@ input[name="back"]{
     margin-top: 40px;
 }
 
-/*.col-2{*/
-/*    display: inline-block;*/
-/*    text-align: left;*/
-/*}*/
+/* div.row:nth-child(2) > label:nth-child(1) {
+    margin-right: 50px;
+    } */
