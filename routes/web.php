@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 //会員登録画面
 Route::get('/member', "MemberController@register")->name("member.register");
@@ -29,10 +25,11 @@ Route::get('/member/complete', "MemberController@complete")->name("member.comple
 
 
 //ログイン
-
 Auth::routes(['register' => false]);
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 
+//認証
+//Route::get('hello/auth', 'HelloController@getAuth');
+//Route::post('hello/auth', 'HelloController@postAuth');

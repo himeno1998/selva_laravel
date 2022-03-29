@@ -39,6 +39,12 @@ input[name="back"]{
     margin-top: 40px;
 }
 
+.col-2{
+    /*display: flex;*/
+    margin-bottom: 10px;
+}
+
+
 /* div.row:nth-child(2) > label:nth-child(1) {
     margin-right: 50px;
     } */

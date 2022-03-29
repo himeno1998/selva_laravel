@@ -40,8 +40,7 @@ class LoginController extends Controller
 
 //    public function username()
 //    {
-//        return 'e-mail';
-//        return 'password';
+//        return 'email';
 //
 //    }
 }

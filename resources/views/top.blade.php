@@ -2,8 +2,9 @@
 
 @section('content')
     <head>
-    <input type="button" name="btn_logout" value="ログアウト">
+        <input type="button" name="btn_logout" value="ログアウト">
     </head>
+    <h3>トップページ</h3>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
