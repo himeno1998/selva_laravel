@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 body{
     background-color: #fff8b3;
     text-align: center;
@@ -10,10 +9,10 @@ body{
 h3{
     font-size: 30px;
 }
-.row{
-    text-align: left;
-    margin-left: 41%;
+.header {
+    background-color: beige;
 }
+
 label{
     margin-right: 50px;
 }
@@ -31,9 +30,10 @@ input[name="action"]{
     color: white;
     margin: 20px;
 }
-input[name="back"]{
+input[name="back"],.btn-top{
     padding: 10px 40px;
     color:coral;
+    background-color:white;
     border-radius: 9px;
     border-color:coral;
     margin-top: 40px;
@@ -45,6 +45,4 @@ input[name="back"]{
 }
 
 
-/* div.row:nth-child(2) > label:nth-child(1) {
-    margin-right: 50px;
-    } */
+

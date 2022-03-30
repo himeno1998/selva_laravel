@@ -10,6 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//トップ画面を表示
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::view('/', 'top');
 
 
 //会員登録画面

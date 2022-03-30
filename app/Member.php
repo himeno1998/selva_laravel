@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+
 class Member extends Authenticatable
 {
     use Notifiable;
@@ -15,6 +16,11 @@ class Member extends Authenticatable
     // Timestamps
     public $timestamps = true;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
         'id',
         'name_sei',

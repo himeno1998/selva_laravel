@@ -3,4 +3,6 @@
 
 <p>会員登録が完了しました。</p>
 
-<a href="{{ route('member.register') }}">戻る</a>
+<button type="button" class="btn btn-top"  onclick="location.href='/'">
+    {{ __('トップに戻る') }}
+</button>

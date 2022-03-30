@@ -5,6 +5,7 @@
         display: flex;
         /*justify-content: space-around;*/
         /*text-align: left;*/
+        margin-left: 41%;
     }
 </style>
 

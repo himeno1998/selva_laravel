@@ -24,6 +24,7 @@ class Member extends Migration
             $table->integer('auth_code')->nullable();
             $table->timestamps();
             $table->dateTime('deleted_at')->nullable();
+            $table->rememberToken();
 //        $table->increments('id', true)->unsigned()->comment('ID');
         });
     }

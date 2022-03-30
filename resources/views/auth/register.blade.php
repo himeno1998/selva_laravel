@@ -50,7 +50,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                            </div>z
                         </div>
 
                         <div class="form-group row">
@@ -66,6 +66,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+
                             </div>
                         </div>
                     </form>

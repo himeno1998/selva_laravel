@@ -99,6 +99,9 @@
 	</div> -->
 
     <input class="btn btn-primary" type="button" value="確認画面へ" id="submitButton"/>
+    <button type="button" class="btn btn-top"  onclick="location.href='/'">
+        {{ __('トップに戻る') }}
+    </button>
 </form>
 
 <script>

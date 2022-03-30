@@ -54,6 +54,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Reset Password') }}
                                 </button>
+                                <button type="button" class="btn btn-top"  onclick="location.href='/'">
+                                    {{ __('トップに戻る') }}
+                                </button>
                             </div>
                         </div>
                     </form>
