@@ -51,7 +51,7 @@
             {{--名前表示--}}
             <div class="welcome_name">
                 <div class="top-left">
-                {{ Auth::user()->name_sei}}{{ Auth::user()->name_mei}}様
+                ようこそ{{ Auth::user()->name_sei}}{{ Auth::user()->name_mei}}様
                 </div>
                 <div class="top-right links">
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">

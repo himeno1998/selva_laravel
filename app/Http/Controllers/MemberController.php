@@ -23,8 +23,8 @@ class MemberController extends Controller
         "name_mei" => "required|string|max:20",
         "nickname" => "required|string|max:10",
         "gender" => "required|integer|max:100|in:1,2",
-        "password" => "required|string|min:8|max:20",
-        "password_confirmed" => "required|string|min:8|max:20|same:password",//passwordと同じか
+        "password" => "required|string|min:8|max:20|alpha_num",
+        "password_confirmed" => "required|string|min:8|max:20|same:password|alpha_num",//passwordと同じか
         "email" => "required|string|max:200|email|unique:members|"
     ];
 

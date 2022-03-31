@@ -11,9 +11,6 @@
 |
 */
 //トップ画面を表示
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 Route::view('/', 'top');
 
 
@@ -26,15 +23,9 @@ Route::post('/member/store', "MemberController@store")->name("member.store");
 //会員完了画面
 Route::get('/member/complete', "MemberController@complete")->name("member.complete");
 
-//Route::get('/home', "HomeController@index")->name("home");
-
 
 //ログイン
 Auth::routes(['register' => false]);
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 
-
-//認証
-//Route::get('hello/auth', 'HelloController@getAuth');
-//Route::post('hello/auth', 'HelloController@postAuth');

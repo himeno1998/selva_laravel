@@ -44,5 +44,9 @@ input[name="back"],.btn-top{
     margin-bottom: 10px;
 }
 
-
-
+label, .col-md-2 {
+    display: contents;
+}
+label, .col-md-6 {
+    display: contents;
+}
