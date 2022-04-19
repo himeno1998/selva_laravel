@@ -23,9 +23,9 @@ class MemberController extends Controller
         "name_mei" => "required|string|max:20",
         "nickname" => "required|string|max:10",
         "gender" => "required|integer|max:100|in:1,2",
-        "password" => "required|string|min:8|max:20|alpha_num",
-        "password_confirmed" => "required|string|min:8|max:20|same:password|alpha_num",//passwordと同じか
-        "email" => "required|string|max:200|email|unique:members|"
+        "password" => ['required','regex:/\A([a-zA-Z0-9]{8,})+\z/u','max:20'],
+        "password_confirmed" => ['required','regex:/\A([a-zA-Z0-9]{8,20})+\z/u','same:password','max:20'],//passwordと同じか
+        "email" => "required|alpha_dash|max:200|email|unique:members"
     ];
 
     public function register()

@@ -73,8 +73,8 @@
             <input type="password" name="password_confirmed" value="{{ old('password_confirmed') }}"/>
         </div>
         <div style="color:red; font-size: 16px">
-            @if($errors->has('password'))
-                @foreach($errors->get('password') as $message)
+            @if($errors->has('password_confirmed'))
+                @foreach($errors->get('password_confirmed') as $message)
                     {{ $message }}<br>
                 @endforeach
             @endif
