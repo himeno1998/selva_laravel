@@ -25,7 +25,7 @@ class MemberController extends Controller
         "gender" => "required|integer|max:100|in:1,2",
         "password" => ['required','regex:/\A([a-zA-Z0-9]{8,})+\z/u','max:20'],
         "password_confirmed" => ['required','regex:/\A([a-zA-Z0-9]{8,20})+\z/u','same:password','max:20'],//passwordと同じか
-        "email" => "required|alpha_dash|max:200|email|unique:members"
+        "email" => "required|string|email:strict,dns|max:200|unique:members"
     ];
 
     public function register()

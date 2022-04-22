@@ -24,6 +24,7 @@
                                            class="form-control @error('email') is-invalid @enderror" name="email"
                                            value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 </div>
+
                             </div>
 
                             <div class="form-group row">
@@ -38,12 +39,12 @@
                             </div>
                             @error('email')
                             <span class="invalid-feedback" role="alert">
-                                        <strong style="color:red; font-size: 16px">※IDもしくはパスワードが間違っています</strong>
+                                        <strong style="color:red; font-size: 16px">{{$messege}}</strong>
                                     </span>
                             @enderror
                             @error('password')
                             <span class="invalid-feedback" role="alert">
-                                        <strong style="color:red; font-size: 16px">※IDもしくはパスワードが間違っています</strong>
+                                        <strong style="color:red; font-size: 16px">{{$messege}}</strong>
                                     </span>
                             @enderror
                             <div class="form-group row mb-0">
